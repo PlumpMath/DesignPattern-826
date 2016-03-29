@@ -4,7 +4,7 @@ import designpatterns.command.simpleRemote.Command;
 
 public class HottubOnCommand implements Command {
 	Hottub hottub;
-	
+
 	public HottubOnCommand(Hottub hottub) {
 		this.hottub = hottub;
 	}

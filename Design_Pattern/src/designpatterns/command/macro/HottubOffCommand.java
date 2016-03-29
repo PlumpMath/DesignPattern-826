@@ -2,7 +2,7 @@ package designpatterns.command.macro;
 
 public class HottubOffCommand implements Command {
 	Hottub hottub;
-	
+
 	public HottubOffCommand(Hottub hottub) {
 		this.hottub = hottub;
 	}
@@ -16,7 +16,7 @@ public class HottubOffCommand implements Command {
 	@Override
 	public void undo() {
 		hottub.on();
-		
+
 	}
 
 }

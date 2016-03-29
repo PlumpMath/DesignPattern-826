@@ -1,15 +1,13 @@
 package designpatterns.command.macro;
 
-
 public class CeilingFanOffCommand implements Command {
 
 	CeilingFan ceilingFan;
 	int prevSpeed;
-	
+
 	public CeilingFanOffCommand(CeilingFan ceilingFan) {
 		this.ceilingFan = ceilingFan;
 	}
-
 
 	@Override
 	public void execute() {
@@ -17,7 +15,6 @@ public class CeilingFanOffCommand implements Command {
 		ceilingFan.off();
 
 	}
-
 
 	@Override
 	public void undo() {
@@ -30,7 +27,7 @@ public class CeilingFanOffCommand implements Command {
 		} else if (prevSpeed == CeilingFan.OFF) {
 			ceilingFan.off();
 		}
-		
+
 	}
 
 }

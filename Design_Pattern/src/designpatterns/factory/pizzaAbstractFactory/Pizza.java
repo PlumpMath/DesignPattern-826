@@ -10,30 +10,29 @@ public abstract class Pizza {
 	Cheese cheese;
 	Pepperoni pepperoni;
 	Clams clam;
-	
-	
+
 	abstract void prepare();
-	
-	void bake(){
+
+	void bake() {
 		System.out.println("Bake for 25 minutes at 350");
 	}
-	
-	void cut(){
+
+	void cut() {
 		System.out.println("Cut the pizza into diagonal slices");
 	}
-	
-	void box(){
+
+	void box() {
 		System.out.println("Place pizza in official PizzaStore box");
 	}
-	
-	String getName(){
+
+	String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public String toString() {
 		StringBuffer result = new StringBuffer();
 		result.append("---- " + name + " ----\n");
@@ -52,7 +51,7 @@ public abstract class Pizza {
 		if (veggies != null) {
 			for (int i = 0; i < veggies.length; i++) {
 				result.append(veggies[i]);
-				if (i < veggies.length-1) {
+				if (i < veggies.length - 1) {
 					result.append(", ");
 				}
 			}

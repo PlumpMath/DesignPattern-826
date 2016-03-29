@@ -2,15 +2,16 @@ package designpatterns.command.remote;
 
 public class Light {
 	String location = "";
-	public Light(String location){
+
+	public Light(String location) {
 		this.location = location;
 	}
-	
-	public void on(){
+
+	public void on() {
 		System.out.println(location + " light is on");
 	}
-	
-	public void off(){
+
+	public void off() {
 		System.out.println(location + " light is off");
 	}
 }

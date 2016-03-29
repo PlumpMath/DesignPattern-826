@@ -6,7 +6,7 @@ import java.util.Iterator;
 public class EnumerationIterator implements Iterator<Object> {
 
 	Enumeration<?> enumeration;
-	
+
 	public EnumerationIterator(Enumeration<?> enumeration) {
 		this.enumeration = enumeration;
 	}
@@ -24,7 +24,7 @@ public class EnumerationIterator implements Iterator<Object> {
 	@Override
 	public void remove() {
 		throw new UnsupportedOperationException();
-		
+
 	}
 
 }

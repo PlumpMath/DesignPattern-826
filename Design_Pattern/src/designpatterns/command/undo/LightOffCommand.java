@@ -3,7 +3,7 @@ package designpatterns.command.undo;
 public class LightOffCommand implements Command {
 	Light light;
 	int level;
-	
+
 	public LightOffCommand(Light light) {
 		this.light = light;
 	}

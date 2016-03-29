@@ -3,7 +3,7 @@ package designpatterns.adapter.ducks;
 public class TurkeyAdapter implements Duck {
 
 	Turkey mTurkey;
-	
+
 	public TurkeyAdapter(Turkey mTurkey) {
 		this.mTurkey = mTurkey;
 	}

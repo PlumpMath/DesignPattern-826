@@ -3,19 +3,19 @@ package designpatterns.command.remote;
 public class Hottub {
 	boolean on;
 	int temperature;
-	
-	public Hottub(){
-		
+
+	public Hottub() {
+
 	}
-	
-	public void on(){
+
+	public void on() {
 		on = true;
 	}
-	
-	public void off(){
+
+	public void off() {
 		on = false;
 	}
-	
+
 	public void bubblesOn() {
 		if (on) {
 			System.out.println("Hottub is bubbling!");
@@ -53,5 +53,5 @@ public class Hottub {
 		temperature = 98;
 		System.out.println("Hottub is cooling to 98 degrees");
 	}
-	
+
 }

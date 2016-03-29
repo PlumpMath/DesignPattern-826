@@ -1,17 +1,18 @@
 package designpatterns.factory.pizzafactorymode;
 
-public class ChicagoPizzaStore extends PizzaStore{
+public class ChicagoPizzaStore extends PizzaStore {
 
 	@Override
 	protected Pizza createPizza(String item) {
 		if (item.equals("cheese")) {
-    		return new ChicagoStyleCheesePizza();
+			return new ChicagoStyleCheesePizza();
 		} else if (item.equals("veggie")) {
-		    	return new ChicagoStyleVeggiePizza();
+			return new ChicagoStyleVeggiePizza();
 		} else if (item.equals("clam")) {
-		    	return new ChicagoStyleClamPizza();
+			return new ChicagoStyleClamPizza();
 		} else if (item.equals("pepperoni")) {
-	    		return new ChicagoStylePepperoniPizza();
-		} else return null;
+			return new ChicagoStylePepperoniPizza();
+		} else
+			return null;
 	}
 }

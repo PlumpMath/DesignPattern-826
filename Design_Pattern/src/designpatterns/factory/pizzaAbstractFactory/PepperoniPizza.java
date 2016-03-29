@@ -2,6 +2,7 @@ package designpatterns.factory.pizzaAbstractFactory;
 
 public class PepperoniPizza extends Pizza {
 	PizzaIngredientFactory ingredientFactory;
+
 	public PepperoniPizza(PizzaIngredientFactory ingredientFactory) {
 		this.ingredientFactory = ingredientFactory;
 	}

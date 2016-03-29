@@ -1,10 +1,10 @@
 package designpatterns.command.macro;
 
-public class CeilingFanLowCommand implements Command{
+public class CeilingFanLowCommand implements Command {
 
 	CeilingFan ceilingFan;
 	int prevSpeed;
-	
+
 	public CeilingFanLowCommand(CeilingFan ceilingFan) {
 		this.ceilingFan = ceilingFan;
 	}
@@ -26,6 +26,6 @@ public class CeilingFanLowCommand implements Command{
 		} else if (prevSpeed == CeilingFan.OFF) {
 			ceilingFan.off();
 		}
-		
+
 	}
 }
