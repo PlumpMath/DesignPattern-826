@@ -1,4 +1,4 @@
-package designpatterns.templement.coffeeShop;
+package designpatterns.template.coffeeShop;
 
 public class Coffee extends CaffeineBeverage {
 

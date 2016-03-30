@@ -1,4 +1,4 @@
-package designpatterns.templement.duckSort;
+package designpatterns.template.duckSort;
 
 public class Duck implements Comparable<Duck> {
 

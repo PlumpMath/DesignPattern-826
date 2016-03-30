@@ -1,15 +1,12 @@
-package designpatterns.templement.coffeeShop;
+package designpatterns.template.coffeeShop;
 
-public abstract class CaffeineBeverageWithHook {
+public abstract class CaffeineBeverage {
 
 	final void prepareRecipe() {
 		boilWater();
 		brew();
 		pourInCup();
-		if (customerWantsCondiments()) {
-			addCondiments();
-		}
-
+		addCondiments();
 	}
 
 	abstract void brew();
@@ -22,9 +19,5 @@ public abstract class CaffeineBeverageWithHook {
 
 	void pourInCup() {
 		System.out.println("Pouring into cup");
-	}
-
-	boolean customerWantsCondiments() {
-		return true;
 	}
 }

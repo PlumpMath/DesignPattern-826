@@ -1,4 +1,4 @@
-package designpatterns.templement.duckSort;
+package designpatterns.template.duckSort;
 
 import java.util.Arrays;
 
