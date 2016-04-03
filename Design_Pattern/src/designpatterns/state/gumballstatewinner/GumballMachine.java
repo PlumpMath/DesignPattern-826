@@ -6,50 +6,50 @@ public class GumballMachine {
 	State hasQuarterState;
 	State soldState;
 	State winnerState;
-	
+
 	State state;
 	private int count;
-	
+
 	public GumballMachine(int numberGumballs) {
-		
+
 		soldOutState = new SoldOutState(this);
 		noQuarterState = new NoQuarterState(this);
 		hasQuarterState = new HasQuarterState(this);
 		soldState = new SoldState(this);
 		winnerState = new WinnerState(this);
-		
+
 		this.count = numberGumballs;
- 		if (numberGumballs > 0) {
+		if (numberGumballs > 0) {
 			state = noQuarterState;
 		} else {
 			state = soldOutState;
 		}
 	}
-	
+
 	public void insertQuarter() {
 		state.insertQuarter();
 	}
- 
+
 	public void ejectQuarter() {
 		state.ejectQuarter();
 	}
- 
+
 	public void turnCrank() {
 		state.turnCrank();
 		state.dispense();
 	}
- 
+
 	void releaseBall() {
 		System.out.println("A gumball comes rolling out the slot...");
 		if (count != 0) {
 			count = count - 1;
 		}
 	}
- 
+
 	int getCount() {
 		return count;
 	}
- 
+
 	void refill(int count) {
 		this.count += count;
 		System.out.println("The gumball machine was just refilled; it's new count is: " + this.count);
@@ -59,32 +59,31 @@ public class GumballMachine {
 	void setState(State state) {
 		this.state = state;
 	}
-    public State getState() {
-        return state;
-    }
 
-    public State getSoldOutState() {
-        return soldOutState;
-    }
+	public State getState() {
+		return state;
+	}
 
-    public State getNoQuarterState() {
-        return noQuarterState;
-    }
+	public State getSoldOutState() {
+		return soldOutState;
+	}
 
-    public State getHasQuarterState() {
-        return hasQuarterState;
-    }
+	public State getNoQuarterState() {
+		return noQuarterState;
+	}
 
-    public State getSoldState() {
-        return soldState;
-    }
-    
+	public State getHasQuarterState() {
+		return hasQuarterState;
+	}
+
+	public State getSoldState() {
+		return soldState;
+	}
+
 	public State getWinnerState() {
 		return winnerState;
 	}
 
-    
- 
 	public String toString() {
 		StringBuffer result = new StringBuffer();
 		result.append("\nMighty Gumball, Inc.");

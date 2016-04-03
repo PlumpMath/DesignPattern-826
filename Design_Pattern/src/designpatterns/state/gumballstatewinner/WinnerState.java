@@ -2,7 +2,7 @@ package designpatterns.state.gumballstatewinner;
 
 public class WinnerState implements State {
 	GumballMachine gumballMachine;
-	
+
 	public WinnerState(GumballMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;
 	}
@@ -28,18 +28,18 @@ public class WinnerState implements State {
 	@Override
 	public void dispense() {
 		gumballMachine.releaseBall();
-		if(gumballMachine.getCount() == 0){
+		if (gumballMachine.getCount() == 0) {
 			gumballMachine.setState(gumballMachine.getSoldOutState());
-		}else{
+		} else {
 			gumballMachine.releaseBall();
 			System.out.println();
-			if(gumballMachine.getCount() > 0){
+			if (gumballMachine.getCount() > 0) {
 				gumballMachine.setState(gumballMachine.noQuarterState);
-			}else{
+			} else {
 				System.out.println("Oops, out of gumballs!");
 				gumballMachine.setState(gumballMachine.soldOutState);
 			}
-			
+
 		}
 
 	}
@@ -49,6 +49,7 @@ public class WinnerState implements State {
 		System.out.println();
 
 	}
+
 	public String toString() {
 		return "despensing two gumballs for your quarter, because YOU'RE A WINNER!";
 	}

@@ -2,7 +2,7 @@ package designpatterns.state.gumballstate;
 
 public class SoldOutState implements State {
 	GumballMachine gumballMachine;
-	
+
 	public SoldOutState(GumballMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;
 	}
@@ -34,7 +34,7 @@ public class SoldOutState implements State {
 		gumballMachine.setState(gumballMachine.getNoQuarterState());
 
 	}
-	
+
 	public String toString() {
 		return "sold out";
 	}
